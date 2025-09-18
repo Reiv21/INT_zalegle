@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="alert('Witam i zycze smacznej kawusi!')">Kawusia</button>
+
+    <hr />
+
+    <form>
+      <label for="wiek">Podaj swoj wiek:</label><br />
+      <input type="number" id="wiek" value="0" />
+    </form>
+    <br />
+
+    <button onclick="sprawdzWiek();">Sprawdz wiek</button>
+
+    <hr />
+    <h3>Lista zakupow:</h3>
+    <form>
+      <input type="checkbox" id="mleko" /> <label for="mleko">Mleko</label
+      ><br />
+      <input type="checkbox" id="cukier" /> <label for="cukier">Cukier</label
+      ><br />
+      <input type="checkbox" id="jajka" /> <label for="jajka">Jajka</label
+      ><br />
+    </form>
+    <br />
+    <button onclick="listaZakupow();">Lista zakupów</button>
+
+    <p id="wynik"></p>
+    <hr />
+
+    <h3>Informacje:</h3>
+    <form>
+      <label for="imie">Imie:</label>
+      <input type="text" id="imie" /><br />
+      <label for="wiekImienia">Wiek:</label>
+      <input type="number" id="wiekImienia" />
+    </form>
+    <br />
+    <button onclick="komunikat();">Komunikat</button>
+
+    <hr />
+    <h2>Zadania 2</h2>
+    <hr />
+
+    <input type="number" id="przeciwna" value="0" />
+    <button onclick="przeciwnaWartosc();">Przeciwna wartość</button>
+    <p id="przeciwnaWynik">Przeciwna liczba do twojej to: 0</p>
+
+    <hr />
+    <br />
+    <label for="przeciwna">Podaj wiek:</label>
+    <input type="number" id="wiekStrzalkowa" placeholder="Podaj wiek" />
+    <button
+      onclick="(() => {
+        var wiek = document.getElementById('wiekStrzalkowa').value;
+        if (wiek >= 18) {
+            alert('Jesteś pełnoletni');
+        } else {
+            alert('Nie jesteś pełnoletni');
+        }
+      })()"
+    >
+      Sprawdź wiek strzałkową funkcją
+    </button>
+
+    <br />
+    <hr />
+    <label for="promienKola">Podaj promien koła:</label>
+    <input type="number" id="promienKola" value="0" />
+    <button onclick="obliczObwodKola()">Oblicz obwód koła</button>`
+
+    <hr />
+
+    <button
+      onclick="
+    {
+        var zbior = [3, 5, 7, 2, 8, -4, 10];
+        var wynik = policzZbiór(zbior);
+        alert('Dla zbioru ' + zbior + ':\nMin: ' + wynik.min + '\nMax: ' + wynik.max + '\nSrednia: ' + wynik.srednia);
+    }"
+    >
+      Policz zbiór
+    </button>
+
+    <hr />
+    <h2>Dodatkowe zadania</h2>
+    <hr />
+
+    <h3>Losowanie tablicy i filtrowanie</h3>
+    <button onclick="losowanie();">Losuj</button>
+    <p id="wynikLosowania"></p>
+    <script src="./scripts.js"></script>
+
+    <hr />
+    <h3>Literki</h3>
+    <input type="text" id="literki" placeholder="Wpisz tekst" />
+    <button onclick="literki();">Przetwórz tekst</button>
+    <div id="wynikLiterki"></div>
+
+    <hr />
+    <h3>Quiz</h3>
+    <button onclick="rozpocznijQuiz();">Rozpocznij quiz</button>
+    <h4 id="pytanie"></h4>
+    <select id="odpowiedzi">
+      <option value="0">Odpowiedź 1</option>
+      <option value="1">Odpowiedź 2</option>
+      <option value="2">Odpowiedź 3</option>
+      <option value="3">Odpowiedź 4</option>
+    </select>
+    <button onclick="sprawdzOdpowiedz();">Sprawdź odpowiedź</button>
+    <h3 id="wynikQuizu"></h3>
+  </body>
+</html>
